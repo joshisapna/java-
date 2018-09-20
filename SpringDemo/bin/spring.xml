@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-init-method="MyInit" default-destroy-method="cleanUp">
+ 
+  <bean id="triangle" class="co.edureka.Triangle">
+  <property name="pointA" ref="ZeroPoint"/>
+   <property name="pointB" ref="Point1"/>
+    <property name="pointC" ref="Point2"/>
+ </bean>
+  <bean id="ZeroPoint" class="co.edureka.point">
+  <property name="x" value="0"/>
+    <property name="y" value="0"/>
+ </bean>
+ 
+     <bean id="Point1" class="co.edureka.point">
+  <property name="x" value="-20"/>
+    <property name="y" value="0"/>
+ </bean>
+ 
+ 
+  <bean id="Point2" class="co.edureka.point">
+  <property name="x" value="20"/>
+    <property name="y" value="0"/>
+ </bean>
+  <bean id="circle" class="co.edureka.circle">
+  <property name="center" ref="ZeroPoint"/>
+    </bean>
+
+  </beans>
+
+
